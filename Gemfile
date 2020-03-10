@@ -5,6 +5,8 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+# By hashing the password with bcrypt, we ensure that an attacker won’t be able to log in to the site even if they manage to obtain a copy of the database.
+gem 'bcrypt', '3.1.13'
 # Bootstrap
 gem 'bootstrap-sass', '3.4.1'
 # Use sqlite3 as the database for Active Record
