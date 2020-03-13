@@ -5,6 +5,11 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+# a Ruby processor for ImageMagick
+gem 'image_processing', '1.9.3'
+gem 'mini_magick', '4.9.5'
+# Active Storage (somewhat surprisingly) doesn’t offer native support for things like format and size validations, but as is so often the case there is a gem that adds it for us
+gem 'active_storage_validations', '0.8.2'
 # By hashing the password with bcrypt, we ensure that an attacker won’t be able to log in to the site even if they manage to obtain a copy of the database.
 gem 'bcrypt', '3.1.13'
 # add the Faker gem to the Gemfile , which will allow us to make sample users with semi-realistic names and email addresses
@@ -66,6 +71,8 @@ end
 
 group :production do
   gem 'pg', '1.1.4'
+  # file storage on Heroku is temporary, use a cloud storage service to store images separately from our application
+  # gem 'aws-sdk-s3', '1.46.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
