@@ -46,6 +46,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # assert_template has been extracted to a gem. To continue using it:
 gem 'rails-controller-testing'
 
+# Capistrano
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+
+
 group :development, :test do
   gem 'sqlite3', '1.4.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
